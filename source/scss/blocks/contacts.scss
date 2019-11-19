@@ -1,0 +1,168 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  //max-width: 1180px;
+  width: 95%;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+
+
+  }
+
+  &__requisites {
+    border-collapse: separate;
+    border-spacing: 0;
+
+    tr {
+      display: flex;
+
+    }
+
+
+     td {
+       display: inline-block;
+
+       span {
+         margin-top: 10px;
+         display: block;
+       }
+       width: 50%;
+       &:first-child {
+         white-space: nowrap;
+         font-weight: 900;
+       }
+
+
+       font-weight: 500;
+       font-size: 3.1vw;
+      padding: 10px;
+       padding-left: 16px;
+      border-radius: 10px 0 0 10px;
+       vertical-align: baseline;
+       padding-top: 10px;
+
+     // background-color:  #e2f0ff;
+    }
+      td:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+
+    tr:nth-child(2n+ 1) td {
+      background-color: #e2f0ff;
+    }
+  }
+
+
+  &__wrapper {
+    border-radius: 15px;
+
+display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: none;
+    background-color: transparent;
+
+
+    &--map {
+      background-image: url("../img/map.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      min-height: 278px;
+      background-size: cover;
+      width: 100%;
+    }
+    &--padding {
+      padding-top: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 20px;
+    }
+    &--shadow {
+      @include black-box-shadow();
+      background-color: $white;
+
+    }
+  }
+  &__title {
+    font-family: 'OvalCyr-Normal';
+    font-size: 9vw;
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .contacts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__wrapper {
+      &--map {
+        height: 100%;
+      }
+    }
+
+    &__info {
+      width: 48%;
+
+      &:last-child {
+        width: 100%;
+      }
+    }
+
+    &__requisites {
+      width: 100%;
+      td {
+        font-size: 18px;
+      }
+    }
+    &__title {
+      font-size: 30px;
+    }
+  }
+}
+
+@media (min-width: 1180px) {
+  .contacts {
+    max-width: 1180px;
+    width: 100%;
+    margin-bottom: 5%;
+
+    &__text {
+      font-size: 16px;
+      line-height: 30px;
+    }
+    &__title {
+      text-align: start;
+    }
+
+    &__wrapper {
+      &--map {
+        background-image: url("../img/map_DESKTOP.png");
+        height: 100%;
+      }
+    }
+    &__requisites {
+      width: 100%;
+
+      td {
+
+        span {
+          display: inline;
+        }
+      }
+    }
+  }
+}

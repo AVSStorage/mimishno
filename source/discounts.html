@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товар</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          type="text/css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" type="text/javascript"></script>
+</head>
+<body>
+<header>
+    <nav class="menu">
+        <div class="menu__wrapper-header">
+            <div class="menu__change-city">
+                <span class="menu__change-description">Выберите город: </span> <span
+                    class="menu__city-name">Москва</span>
+                <button class="menu__choose-button">Выберите город</button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#">Доставка</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Оплата</a></li>
+                <li class="menu__item"><a class="menu__link active" href="#">Акции</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Общий каталог</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Статьи</a></li>
+            </ul>
+        </div>
+
+    </nav>
+    <nav class="main-nav">
+        <div class="main-nav-info">
+            <div class="main-nav-info__wrapper">
+                <a href="tovar.html"><img src="img/logo.png"
+                                          srcset="img/logo.png 320w, img/logo_desktop.png 800w, img/logo_desktop.png 1200w"
+                                          alt="Логотип"></a>
+                <div class="main-nav-info__speech"><p class="main-nav-info__text">Доставляем по всей Росии<br>Вы
+                    платите
+                    при получении</p></div>
+            </div>
+            <div class="main-nav-info__search-wrapper">
+                <input class="main-nav-info__search" type="text" name="search" id="search"
+                       placeholder="Поиск..">
+                <button class="main-nav-info__search-button">Поиск</button>
+            </div>
+        </div>
+        <div class="main-nav-info">
+            <div class="main-nav-info__block">
+                <div class="main-nav-info__images">
+                    <svg width="30" height="30" version="1.1" class="main-nav-info__icon main-nav-info__icon--cart"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="-505 506 489 489" style="enable-background:new -505 506 489 489;"
+                         xml:space="preserve">
+                    <g>
+	                    <path d="M-64.9,928.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6c-0.8-52.6-43.8-95.1-96.6-95.1s-95.8,42.5-96.6,95.1h-57.6
+		                  c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+		                C-64.8,929.5-64.8,929.1-64.9,928.7z M-260.5,533c37.9,0,68.8,30.4,69.6,68.1h-139.2C-329.3,563.4-298.4,533-260.5,533z
+		                M-138.2,968h-244.6c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+		                  c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C-92.2,951.2-112.9,968-138.2,968z"/>
+                    </g>
+                    </svg>
+                    <span class="main-nav-info__cost">0</span>
+                </div>
+                <div class="main-nav-info__cart-wrapper">
+                    <p class="main-nav-info__cart-text">Корзина</p>
+                    <p class="main-nav-info__cart">1000 руб.</p>
+                </div>
+                <button class="main-nav-info__toggle">Открыть меню</button>
+            </div>
+            <div class="main-nav-info__block">
+                <p class="main-nav-info__phone">+7 (495) 118-25-27</p>
+                <span class="main-nav-info__schedule">пн-пт с 10:00 до 19:00</span>
+                <svg version="1.1" class=" main-nav-info__icon main-nav-info__icon--telephone"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="-733 734.33 32.67 32.67" style="enable-background:new -733 734.33 32.67 32.67;"
+                     xml:space="preserve">
+                        <style type="text/css">
+	                        .st0 {
+                                fill: #CE1348;
+                            }
+                        </style>
+                    <g>
+	                        <path class="st0" d="M-704.81,750.84h-1.67c0-5.44-4.42-9.86-9.86-9.86l0-1.66C-709.98,739.31-704.81,744.48-704.81,750.84z
+		                     M-716.33,742.19l0,1.66c3.85,0,6.98,3.13,6.98,6.98l1.67,0C-707.69,746.07-711.56,742.19-716.33,742.19z M-716.67,734.33
+		                     c-9.01,0-16.33,7.33-16.33,16.33c0,9.01,7.33,16.33,16.33,16.33c0.56,0,1.01-0.45,1.01-1.01c0-0.56-0.45-1.01-1.01-1.01
+		                    c-7.9,0-14.32-6.42-14.32-14.32c0-7.9,6.42-14.32,14.32-14.32s14.32,6.42,14.32,14.32c0,3.3-1.76,6.57-4.27,7.95
+		                    c-0.91,0.5-1.9,0.75-2.96,0.76c0.63-0.38,1.18-0.89,1.59-1.53c0.08-0.12,0.19-0.23,0.24-0.36c0.33-0.79,0.36-1.68,0.56-2.52
+		                    c0.24-1.06-4.66-3.14-5.08-1.81c-0.15,0.49-0.39,2.05-0.7,2.46c-0.28,0.37-0.95,0.19-1.38-0.17c-1.12-0.95-2.36-2.35-3.46-3.46l0,0
+		                    c-0.03-0.03-0.06-0.06-0.09-0.09c-0.03-0.03-0.06-0.06-0.09-0.09v0c-1.11-1.1-2.51-2.34-3.46-3.46c-0.36-0.42-0.53-1.1-0.17-1.38
+		                    c0.41-0.31,1.97-0.54,2.46-0.7c1.33-0.42-0.75-5.33-1.82-5.08c-0.83,0.2-1.73,0.23-2.52,0.55c-0.13,0.06-0.24,0.16-0.36,0.24
+		                    c-2.8,1.77-3.16,6.08-0.43,9.29c1.04,1.23,2.13,2.42,3.24,3.58l-0.01,0c0.03,0.03,0.06,0.06,0.09,0.09
+		                    c0.03,0.03,0.06,0.06,0.09,0.1l0.01-0.01c1.16,1.12,2.54,2.77,4.77,4.26c4.7,3.14,8.31,2.26,10.44,1.1
+		                    c3.67-2.02,5.31-6.34,5.31-9.72C-700.33,741.66-707.66,734.33-716.67,734.33z"/>
+                        </g>
+                    </svg>
+
+                <span class="main-nav-info__callback-text">обратный звонок</span>
+                <button class="main-nav-info__callback callback-open button blue-button ">Обратный звонок</button>
+            </div>
+        </div>
+    </nav>
+    <nav class="sub-menu">
+        <ul class="sub-menu__list">
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Взрослые кигуруми</a><span>(Рост 150см - 190см)</span>
+            </li>
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Детские
+                кигуруми</a><span>(Рост 95см - 150см)</span></li>
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Тапки-лапки</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link" href="#">Аксессуары</a></li>
+        </ul>
+    </nav>
+    <div class="menu__mobile hidden">
+
+        <div class="menu__wrapper">
+            <button class="menu__close">Закрыть</button>
+            <p class="menu__mobile-title">Меню</p>
+
+            <nav class="sub-menu">
+                <ul class="sub-menu__list">
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Взрослые кугуруми</a><span>(Рост 150см - 190см)</span>
+                    </li>
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Детские
+                        кугуруми</a><span>(Рост 95см - 150см)</span></li>
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Тапки</a></li>
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Перчатки-лапки</a></li>
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Летние кугуруми</a></li>
+                    <li class="sub-menu__item"><a class="sub-menu__link" href="#">Аксессуары</a></li>
+                </ul>
+            </nav>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Доставка</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Оплата</a></li>
+                    <li class="menu__item"><a class="menu__link active" href="#">Акции</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Общий каталог</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Статьи</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="preview preview-discounts">
+        <div class="preview__wrapper">
+            <p class="preview__title">Акции</p>
+            <ul class="preview__breadcrumbs">
+                <li class="preview__breadcrumb">Главная</li>
+                <li><span class="preview__delimiter">/</span></li>
+                <li class="preview__breadcrumb">Акции</li>
+            </ul>
+        </div>
+    </div>
+    <div class="sales">
+    <article class="sale">
+        <div class="sale__wrapper">
+        <h1 class="sale__title">Акция "Сними Отзыв - получи Кэшбэк!"</h1>
+            <img class="sale__image sale__image--left" align="left" src="img/article_image.png">
+        <p class="sale__text">
+
+            Закажите у нас любую пижаму и, после получения, оставьте видео отзыв о нашем магазине. Содержание отзыва ограничивается только Вашей фантазией! Вы можете рассказать про работу менеджеров, про доставку, про саму пижаму: в общем обо все, что Вам захочется!
+            <span class="sale__text">
+                В свою очередь, магазин Кигуруми.РФ готов вознаградить Ваши старания! Мы готовы вернуть Вам 500 p за первый отзыв о конкретном товаре. Если Ваш отзыв окажется вторым, то Вы получите 300 p. За третий и все последующие мы вернём 150 p! Чтобы узнать сколько вы можете получить за отзыв на свою пижаму, просто зайдите на страницу товара на нашем сайте. Для удобства Вы можете воспользоваться строкой поиска в шапке сайта или страницей поиска.
+
+            </span>
+        </p>
+
+            <strong class="sale__text">Что нужно сделать?</strong>
+        <p class="sale__text">
+            Если Вы еще не заказывали пижам в нашем магазине, то самое время выбрать что-нибудь из нашего каталога и исправить это;
+            После того, как Вы получите заказ, снимите видео, в котором Вы выражаете свое мнение о работе сотрудников магазина, о сайте, о самой пижаме или о том, на что именно Вы хотели бы обратить внимание. Мы не ограничиваем Вас в тематике;
+            Загрузите Ваше видео на сайт vk.com или в youtube.com;
+            Зайдите в нашу официальную группу Вконтакте и отправьте запись на стену. К записи прикрепите свое видео и, при желании, текст. В комментарии к записи обязательно укажите Ваш номер заказа. И не забудьте вступить в группу, если Вы еще не являетесь ее участником.
+        </p>
+            <strong class="sale__text">Топоритесь! Предложение ограничено!</strong>
+            <strong class="sale__text sale__text--pink">Внимание</strong>
+        <p class="sale__text">
+            Отправляя видео на стену нашей группы Вконтакте, вы соглашаетесь на то, чтобы данный видеоматериал был опубликован в самой группе и на сайте https://www.кигуруми.рф без ограничений по времени или каких-либо иных ограничений не противоречащих законодательству Российской Федерации.
+        </p>
+        </div>
+    </article>
+    <article class="sale sale--diff">
+        <div class="sale__wrapper">
+        <h1 class="sale__title">Акция "Нашли дешевле"</h1>
+            <img class="sale__image sale__image--right" align="right" srcset="img/article_image.png">
+        <p class="sale__text">
+
+            Вы нашли товар дешевле - сообщите нам об этом, и мы сделаем наше предложение более привлекательным для Вас! Скидки распространяются на все товары, представленные на нашем сайте!
+        </p>
+
+            <strong class="sale__text">Что нужно сделать?</strong>
+         <ul class="sale__list">
+             <li class="sale__item">Товар должен быть полностью аналогичен предлагаемому нами (точно такой же);</li>
+             <li class="sale__item">Товар не должен участвовать в распродажах и акциях на сайте конкурента;</li>
+             <li class="sale__item">Товар должен быть новым;</li>
+             <li class="sale__item">Товар должен быть в наличии и срок доставки должен быть аналогичен предлагаемому нами;</li>
+             <li class="sale__item">У магазина-конкурента на сайте должна присутствовать вся контактная информация (телефон, адрес, юр. данные);</li>
+             <li class="sale__item">На сайте конкурента должна быть возможность оформления заказа (мы это проверяем, чтобы сайт не был "подставным");</li>
+         </ul>
+        <span class="sale__text sale__text--left">Как можно сообщить о конкуренте:</span>
+        <ul class="sale__list">
+            <li class="sale__item sale__item--blue">На сайте в карточке товара есть ссылка на форму "Нашли дешевле? Снизим цену!";</li>
+            <li class="sale__item sale__item--blue">Укажите ваше имя, номер телефона и ссылку на товар конкурента;</li>
+        </ul>
+        <strong class="sale__text sale__text--pink">Внимание</strong>
+        <p class="sale__text">
+            Акция действительна только для товаров интернет-магазинов. На товары торговых площадок (таких как AliExpress, eBay, Avito, Tiu и т.п.) действие акции не распространяется.
+        </p>
+        </div>
+    </article>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer__wrapper-main">
+        <div class="footer__header">
+            <img class="footer__image" src="img/logo_desktop.png">
+            <div class="footer__advantages">
+                <div class="footer__advantage">
+                    <img src="img/sport-shirt.png">
+                    <span class="footer__advantage-text">Оплата после <br> примерки</span>
+                </div>
+                <div class="footer__advantage">
+                    <img src="img/shopping-bag.png">
+                    <span class="footer__advantage-text">Свой розничный<br> магазин в Москве</span>
+                </div>
+                <div class="footer__advantage">
+                    <img src="img/package.png">
+                    <span class="footer__advantage-text">Доставка по всей<br> Росии</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer__body">
+            <ul class="footer__menu">
+                <li class="footer__item footer__title"><a class="footer__link" href="#">Каталог</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Взрослые кугуруми</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Детские кугуруми</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Тапки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Перчатки-лапки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Летние кигуруми</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Аксессуары</a></li>
+            </ul>
+
+            <ul class="footer__menu">
+                <li class="footer__item footer__title"><a class="footer__link" href="#">О магазине</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Доставка</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Оплата</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Отзывы</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Общий каталог</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Статьи</a></li>
+            </ul>
+            <div class="footer__wrapper">
+                <div class="footer__info">
+                    <span class="footer__title">Принимаем</span>
+                    <img src="img/Alfa-Bank.png">
+                    <div class="footer__logos">
+                        <img src="img/visa-logo.png">
+                        <img src="img/mastercard.png">
+                        <img src="img/mir.png">
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <span class="footer__title">Доставляем</span>
+                    <div class="footer__logos">
+                        <img src="img/Russian_Post_logo.png">
+                        <img src="img/sdek.png">
+                        <img src="img/EMS.png">
+                    </div>
+                </div>
+                <img class="footer__image" src="img/logo_desktop.png">
+            </div>
+            <div class="footer__info">
+                <p class="footer__phone">
+                    <svg version="1.1" class="footer__phone-icon main-nav-info__icon--telephone"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="-733 734.33 32.67 32.67" style="enable-background:new -733 734.33 32.67 32.67;"
+                         xml:space="preserve">
+                        <style type="text/css">
+	                        .st0 {
+                                fill: #ffffff;
+                            }
+                        </style>
+                        <g>
+	                        <path class="st0" d="M-704.81,750.84h-1.67c0-5.44-4.42-9.86-9.86-9.86l0-1.66C-709.98,739.31-704.81,744.48-704.81,750.84z
+		                     M-716.33,742.19l0,1.66c3.85,0,6.98,3.13,6.98,6.98l1.67,0C-707.69,746.07-711.56,742.19-716.33,742.19z M-716.67,734.33
+		                     c-9.01,0-16.33,7.33-16.33,16.33c0,9.01,7.33,16.33,16.33,16.33c0.56,0,1.01-0.45,1.01-1.01c0-0.56-0.45-1.01-1.01-1.01
+		                    c-7.9,0-14.32-6.42-14.32-14.32c0-7.9,6.42-14.32,14.32-14.32s14.32,6.42,14.32,14.32c0,3.3-1.76,6.57-4.27,7.95
+		                    c-0.91,0.5-1.9,0.75-2.96,0.76c0.63-0.38,1.18-0.89,1.59-1.53c0.08-0.12,0.19-0.23,0.24-0.36c0.33-0.79,0.36-1.68,0.56-2.52
+		                    c0.24-1.06-4.66-3.14-5.08-1.81c-0.15,0.49-0.39,2.05-0.7,2.46c-0.28,0.37-0.95,0.19-1.38-0.17c-1.12-0.95-2.36-2.35-3.46-3.46l0,0
+		                    c-0.03-0.03-0.06-0.06-0.09-0.09c-0.03-0.03-0.06-0.06-0.09-0.09v0c-1.11-1.1-2.51-2.34-3.46-3.46c-0.36-0.42-0.53-1.1-0.17-1.38
+		                    c0.41-0.31,1.97-0.54,2.46-0.7c1.33-0.42-0.75-5.33-1.82-5.08c-0.83,0.2-1.73,0.23-2.52,0.55c-0.13,0.06-0.24,0.16-0.36,0.24
+		                    c-2.8,1.77-3.16,6.08-0.43,9.29c1.04,1.23,2.13,2.42,3.24,3.58l-0.01,0c0.03,0.03,0.06,0.06,0.09,0.09
+		                    c0.03,0.03,0.06,0.06,0.09,0.1l0.01-0.01c1.16,1.12,2.54,2.77,4.77,4.26c4.7,3.14,8.31,2.26,10.44,1.1
+		                    c3.67-2.02,5.31-6.34,5.31-9.72C-700.33,741.66-707.66,734.33-716.67,734.33z"/>
+                        </g>
+                    </svg>
+                    +7 (495) 118-25-27
+                </p>
+                <span class="footer__schedule">пн-пт с 10:00 до 19:00</span>
+                <button class="footer__callback callback-open button button-pink">Обратный звонок</button>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p class="footer__text">2019 © Mimishno Все права защищены</p>
+        </div>
+    </div>
+    <div class="callback">
+
+        <form class="callback__form">
+            <p class="callback__title">Заявка на обратный звонок</p>
+            <button class="callback__close" type="button" id="close-callback">Закрыть</button>
+            <div class="callback__wrapper">
+                <label class="callback__label">Имя</label>
+                <input class="callback__input" type="text" id="name" name="name">
+            </div>
+            <div class="callback__wrapper">
+                <label class="callback__label">Телефон</label>
+                <input class="callback__input" type="text" id="phone" name="phone" placeholder="+7 (_ _ _)-_ _ _-_ _ -_ _">
+            </div>
+            <button type="submit" class="callback__button button button-pink">Отправить</button>
+        </form>
+    </div>
+</footer>
+<script>
+    $('.menu__close').click(function () {
+        $('.menu__mobile').toggleClass('hidden');
+    });
+    $('.main-nav-info__toggle').click(function () {
+        $('.menu__mobile').toggleClass('hidden');
+    });
+    $('#close-callback').click(function () {
+        $('.callback').hide();
+    });
+
+    $('.callback-open').click(function () {
+        $('.callback').show();
+    });
+</script>
+</body>
+</html>

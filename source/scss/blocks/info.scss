@@ -1,0 +1,24 @@
+.info {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .info {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    &__title {
+      text-align: center;
+      font-family: 'OvalCyr-Normal';
+      font-size: 45px;
+    }
+
+    &__text {
+      text-align: center;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+}

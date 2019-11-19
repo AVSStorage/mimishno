@@ -1,0 +1,177 @@
+.menu {
+  padding: 20px;
+  display: none;
+
+&__wrapper-header {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1180px;
+  width: 100%;
+}
+
+
+  &__link.active {
+    color: $pink;
+  }
+  &__link {
+    color: $gray;
+    text-decoration: none;
+    font-weight: 900;
+    display: block;
+    padding-bottom: 10px;
+  }
+
+  &__close {
+    width: 33px;
+    height: 33px;
+    border: none;
+    background-image: url("../img/close.png");
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+  }
+  &__mobile {
+    position: fixed;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color:
+            rgba(0,0,0,0.4);
+
+    .sub-menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+    }
+
+
+    &-title {
+      font-weight: 900;
+      text-transform: uppercase;
+      font-family: 'OvalCyr-Normal';
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  &__wrapper {
+    background-color:$white;
+    margin: 15% auto;
+    padding-top: 30px;
+    width: 80%;
+    border-radius: 15px;
+    position: relative;
+  }
+
+  &__change-city {
+      display: none;
+  }
+}
+
+
+@media (min-width: 576px) {
+  .menu {
+    padding: 0;
+    display: flex;
+    background-color: $black;
+    justify-content: center;
+
+
+    &__change-city {
+      display: none;
+    }
+    &__wrapper-header {
+      align-items: center;
+      padding-left: 35px;
+    }
+    &__city-name {
+      text-decoration: underline;
+      margin-left: 5px;
+      display: block;
+    }
+    &__list {
+      padding: 15px;
+      display: flex;
+      width: 85%;
+      justify-content: space-around;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      padding-left: 17px;
+      padding-right: 7px;
+    }
+
+    &__link {
+      color: $white;
+      font-weight: 400;
+
+    }
+
+    &__link.active {
+      font-weight: bold;
+    }
+
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .menu {
+
+
+    &__choose-button {
+
+      font-size: 0;
+      position: relative;
+      background-color: transparent;
+      border: none;
+      margin-left: 6px;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0px;
+        border: 8px solid transparent;
+        border-top: 8px solid white;
+        bottom: -6px;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 1100px) {
+  .menu {
+    &__change-city {
+      display: flex;
+      color: $white;
+      width: 23%;
+    }
+
+    &__change-description {
+      position: relative;
+      &::before {
+        content:'';
+        position: absolute;
+        width: 10px;
+        height: 14px;
+        background-image: url("../img/loc.png");
+        background-repeat: no-repeat;
+        left: -20px;
+        top: 1px;
+      }
+    }
+  }
+}

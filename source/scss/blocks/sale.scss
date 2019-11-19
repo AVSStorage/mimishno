@@ -1,0 +1,299 @@
+.sales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sale {
+  width: 100%;
+
+  padding-top: 0;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  min-height: 600px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:last-child {
+    margin-bottom: 150px;
+  }
+  z-index: 1;
+
+  &__wrapper {
+    filter: drop-shadow(0 30px 20px rgba(66,66,66,0.35));
+    width: 92%;
+    margin-top: 20%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  &__image {
+    width: 85%;
+    margin-bottom: 30px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -12px;
+    background-size: 110%;
+    background-image: url("../img/article__background-before.png");
+    height: 100px;
+    background-repeat: no-repeat;
+    width: 99%;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: 0px;
+    background-image: url("../img/article__background-after.png");
+    height: 100px;
+    width: 99%;
+    background-size: 115% 100%;
+    background-position: 50%;
+  }
+
+  &__text {
+    font-size: 4vw;
+    line-height: 4.5vw;
+    text-align: justify;
+    padding-left: 7%;
+    padding-right: 7%;
+
+    &--left {
+      width: 100%;
+      padding: 0;
+      padding-left: 7%;
+      padding-right: 7%;
+      text-align: start;
+    }
+
+    &--pink {
+      color: $pink;
+    }
+  }
+
+  &__list {
+    padding-left: 7%;
+    padding-right: 7%;
+
+
+  }
+
+  &__item {
+    font-size: 4vw;
+    line-height: 4.5vw;
+    padding-bottom: 5px;
+
+    &::before {
+      content: ""; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      background-color: $pink; /* Change the color */
+      font-weight: bold; /* If you want it to be bold */
+      display: inline-block; /* Needed to add space between the bullet and the text */
+      width: 15px; /* Also needed for space (tweak if needed) */
+      height: 15px;
+      margin-right: 10px; /* Also needed for space (tweak if needed) */
+      border-radius: 50%;
+      margin-left: 20px;
+    }
+
+    &--blue {
+      &::before {
+        content: ""; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        background-color: $blue; /* Change the color */
+        font-weight: bold; /* If you want it to be bold */
+        display: inline-block; /* Needed to add space between the bullet and the text */
+        width: 15px; /* Also needed for space (tweak if needed) */
+        height: 15px;
+        margin-right: 10px; /* Also needed for space (tweak if needed) */
+        border-radius: 50%;
+        margin-left: 20px;
+      }
+    }
+
+  }
+
+  strong {
+    display: block;
+    text-indent: 0;
+    text-align: start;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    font-family: 'OvalCyr-Normal';
+    font-size: 5.2vw;
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+  .sales {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10%;
+  }
+
+  .sale {
+    &__text {
+      font-size: 13px;
+      line-height: 18px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 4%;
+      background-size: 122% 100%;
+      background-image: url("../img/article__background-before.png");
+      height: 100px;
+      background-repeat: no-repeat;
+      width: 92%;
+      z-index: -1;
+      background-position: 50%;
+    }
+
+    &__title {
+      font-size: 19px;
+      padding-left: 7%;
+      padding-right: 7%;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -100px;
+      left: 4%;
+      background-image: url("../img/Background.png");
+      height: 100px;
+      width: 92%;
+      background-size: 125% 100%;
+      background-position: 50%;
+    }
+
+    &__item {
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .sales {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .sale {
+    max-width: 1400px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &--diff {
+      .sale__wrapper {
+       // width: 66%;
+        padding-left: 1%;
+      }
+    }
+
+    &__item {
+      font-size: 16px;
+    }
+
+    &__text {
+      text-indent: 20px;
+      font-size: 17px;
+      padding: 0;
+      line-height: 20px;
+      display: block;
+      padding-top: 5px;
+      position: relative;
+      //&:last-child {
+      //  padding-bottom: 10%;
+      //}
+    }
+
+    &__title {
+      text-align: start;
+      font-size: 29px;
+      padding-left: 0;
+      width: 100%;
+    }
+
+    &__wrapper {
+      display: block;
+      max-width: 980px;
+      margin: 0 auto;
+      width: 100%;
+      filter: none;
+      background-color: transparent;
+      box-shadow: none;
+      padding-top: 10%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      z-index: 0;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 10%;
+      padding-right: 1%;
+
+
+
+    }
+
+    &__image {
+      width: 35%;
+
+      margin-bottom: 0;
+
+
+      &--left {
+        margin-right: 20px;
+      }
+
+      &--right {
+        width: 215px;
+        margin-left: 20px;
+        height: 169px;
+      }
+    }
+
+    &::before {
+      background-image: none;
+    }
+
+    &::after {
+      background-image: none;
+    }
+  }
+
+}
+
+@media (min-width: 1260px) {
+  .sale {
+    background-image: url("../img/article__background-desktop.png");
+    &--diff {
+      background-image: url("../img/article-2-background.png");
+    }
+  }
+}

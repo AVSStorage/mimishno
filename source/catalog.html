@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товар</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+          type="text/css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <script src="js/owl.caorusel.js" type="text/javascript"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <nav class="menu">
+            <div class="menu__wrapper-header">
+                <div class="menu__change-city">
+                    <span class="menu__change-description">Выберите город: </span> <span
+                        class="menu__city-name">Москва</span>
+                    <button class="menu__choose-button">Выберите город</button>
+                </div>
+                <ul class="menu__list">
+                    <li class="menu__item"><a class="menu__link" href="#">Доставка</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Оплата</a></li>
+                    <li class="menu__item"><a class="menu__link active" href="#">Акции</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Общий каталог</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Статьи</a></li>
+                </ul>
+            </div>
+
+        </nav>
+        <nav class="main-nav">
+            <div class="main-nav-info">
+                <div class="main-nav-info__wrapper">
+                    <a href="tovar.html"><img src="img/logo.png"
+                                              srcset="img/logo.png 320w, img/logo_desktop.png 800w, img/logo_desktop.png 1200w"
+                                              alt="Логотип"></a>
+                    <div class="main-nav-info__speech"><p class="main-nav-info__text">Доставляем по всей Росии<br>Вы
+                        платите
+                        при получении</p></div>
+                </div>
+                <div class="main-nav-info__search-wrapper">
+                    <input class="main-nav-info__search" type="text" name="search" id="search"
+                           placeholder="Поиск..">
+                    <button class="main-nav-info__search-button">Поиск</button>
+                </div>
+            </div>
+            <div class="main-nav-info">
+                <div class="main-nav-info__block">
+                    <div class="main-nav-info__images">
+                        <svg width="30" height="30" version="1.1" class="main-nav-info__icon main-nav-info__icon--cart"
+                             xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="-505 506 489 489" style="enable-background:new -505 506 489 489;"
+                             xml:space="preserve">
+                    <g>
+	                    <path d="M-64.9,928.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6c-0.8-52.6-43.8-95.1-96.6-95.1s-95.8,42.5-96.6,95.1h-57.6
+		                  c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+		                C-64.8,929.5-64.8,929.1-64.9,928.7z M-260.5,533c37.9,0,68.8,30.4,69.6,68.1h-139.2C-329.3,563.4-298.4,533-260.5,533z
+		                M-138.2,968h-244.6c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+		                  c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C-92.2,951.2-112.9,968-138.2,968z"/>
+                    </g>
+                    </svg>
+                        <span class="main-nav-info__cost">0</span>
+                    </div>
+                    <div class="main-nav-info__cart-wrapper">
+                        <p class="main-nav-info__cart-text">Корзина</p>
+                        <p class="main-nav-info__cart">1000 руб.</p>
+                    </div>
+                    <button class="main-nav-info__toggle">Открыть меню</button>
+                </div>
+                <div class="main-nav-info__block">
+                    <p class="main-nav-info__phone">+7 (495) 118-25-27</p>
+                    <span class="main-nav-info__schedule">пн-пт с 10:00 до 19:00</span>
+                    <svg version="1.1" class=" main-nav-info__icon main-nav-info__icon--telephone"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="-733 734.33 32.67 32.67" style="enable-background:new -733 734.33 32.67 32.67;"
+                         xml:space="preserve">
+                        <style type="text/css">
+	                        .st0 {
+                                fill: #CE1348;
+                            }
+                        </style>
+                        <g>
+	                        <path class="st0" d="M-704.81,750.84h-1.67c0-5.44-4.42-9.86-9.86-9.86l0-1.66C-709.98,739.31-704.81,744.48-704.81,750.84z
+		                     M-716.33,742.19l0,1.66c3.85,0,6.98,3.13,6.98,6.98l1.67,0C-707.69,746.07-711.56,742.19-716.33,742.19z M-716.67,734.33
+		                     c-9.01,0-16.33,7.33-16.33,16.33c0,9.01,7.33,16.33,16.33,16.33c0.56,0,1.01-0.45,1.01-1.01c0-0.56-0.45-1.01-1.01-1.01
+		                    c-7.9,0-14.32-6.42-14.32-14.32c0-7.9,6.42-14.32,14.32-14.32s14.32,6.42,14.32,14.32c0,3.3-1.76,6.57-4.27,7.95
+		                    c-0.91,0.5-1.9,0.75-2.96,0.76c0.63-0.38,1.18-0.89,1.59-1.53c0.08-0.12,0.19-0.23,0.24-0.36c0.33-0.79,0.36-1.68,0.56-2.52
+		                    c0.24-1.06-4.66-3.14-5.08-1.81c-0.15,0.49-0.39,2.05-0.7,2.46c-0.28,0.37-0.95,0.19-1.38-0.17c-1.12-0.95-2.36-2.35-3.46-3.46l0,0
+		                    c-0.03-0.03-0.06-0.06-0.09-0.09c-0.03-0.03-0.06-0.06-0.09-0.09v0c-1.11-1.1-2.51-2.34-3.46-3.46c-0.36-0.42-0.53-1.1-0.17-1.38
+		                    c0.41-0.31,1.97-0.54,2.46-0.7c1.33-0.42-0.75-5.33-1.82-5.08c-0.83,0.2-1.73,0.23-2.52,0.55c-0.13,0.06-0.24,0.16-0.36,0.24
+		                    c-2.8,1.77-3.16,6.08-0.43,9.29c1.04,1.23,2.13,2.42,3.24,3.58l-0.01,0c0.03,0.03,0.06,0.06,0.09,0.09
+		                    c0.03,0.03,0.06,0.06,0.09,0.1l0.01-0.01c1.16,1.12,2.54,2.77,4.77,4.26c4.7,3.14,8.31,2.26,10.44,1.1
+		                    c3.67-2.02,5.31-6.34,5.31-9.72C-700.33,741.66-707.66,734.33-716.67,734.33z"/>
+                        </g>
+                    </svg>
+
+                    <span class="main-nav-info__callback-text">обратный звонок</span>
+                    <button class="main-nav-info__callback callback-open button blue-button ">Обратный звонок</button>
+                </div>
+            </div>
+        </nav>
+        <nav class="sub-menu">
+            <ul class="sub-menu__list">
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Взрослые кигуруми</a><span>(Рост 150см - 190см)</span>
+                </li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Детские
+                    кигуруми</a><span>(Рост 95см - 150см)</span></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Тапки-лапки</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Аксессуары</a></li>
+            </ul>
+        </nav>
+        <div class="menu__mobile hidden">
+
+            <div class="menu__wrapper">
+                <button class="menu__close">Закрыть</button>
+                <p class="menu__mobile-title">Меню</p>
+
+                <nav class="sub-menu">
+                    <ul class="sub-menu__list">
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Взрослые кугуруми</a><span>(Рост 150см - 190см)</span>
+                        </li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Детские
+                            кугуруми</a><span>(Рост 95см - 150см)</span></li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Тапки</a></li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Перчатки-лапки</a></li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Летние кугуруми</a></li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Аксессуары</a></li>
+                    </ul>
+                </nav>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__link" href="#">Доставка</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Оплата</a></li>
+                        <li class="menu__item"><a class="menu__link active" href="#">Акции</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Общий каталог</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Статьи</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="preview">
+            <div class="preview__wrapper">
+                <p class="preview__title">Взрослые кигуруми</p>
+                <ul class="preview__breadcrumbs">
+                    <li class="preview__breadcrumb">Главная</li>
+                    <li><span class="preview__delimiter">/</span></li>
+                    <li class="preview__breadcrumb">Каталог</li>
+                    <li><span class="preview__delimiter">/</span></li>
+                    <li class="preview__breadcrumb active">Взрослые кугуруми</li>
+                </ul>
+            </div>
+        </div>
+        <div class="goods-tags">
+            <ul class="goods-tags__list">
+                <li class="goods-tags__item active"><a class="goods-tag__link">Все</a></li>
+                <li class="goods-tags__item" ><a class="goods-tag__link">Единороги</a></li>
+                <li class="goods-tags__item" ><a class="goods-tag__link">Животные</a></li>
+                <li class="goods-tags__item"><a class="goods-tag__link">Персонажи</a></li>
+            </ul>
+        </div>
+        <div class="goods__wrapper">
+        <div class="good-filters">
+            <form class="good-filters__form">
+                <button class="good-filters__close" type="button" id="close-filters">Закрыть фильтры</button>
+                <div class="good-filters__wrapper">
+                    <p class="good-filters__title">Цена</p>
+                    <button class="good-filters__toggle" type="button">Открыть</button>
+                    <div class="good-filters__price good-filters__content">
+                        <div class="good-filters__range-wrapper">
+                            <input type="text" class="good-filters__range-input" data-index="0">
+                            <span class="good-filters__range-partition"> — </span>
+                            <input type="text" class="good-filters__range-input" data-index="1">
+                        </div>
+
+                        <div id="slider-range"></div>
+                    </div>
+                </div>
+                <div class="good-filters__wrapper">
+                    <p class="good-filters__title">Пол</p>
+                    <button class="good-filters__toggle" type="button">Открыть</button>
+                    <div class="good-filters__sex good-filters__content">
+                        <label for="unisex" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="unisex" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            Унисекс
+                        </label>
+                        <label for="man" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="man" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            Мужчина
+                        </label>
+                        <label for="woman" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="woman" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            Женщина
+                        </label>
+                    </div>
+                </div>
+                <div class="good-filters__wrapper">
+                    <p class="good-filters__title">Цвет</p>
+                    <button class="good-filters__toggle" type="button">Открыть</button>
+                    <div class="good-filters__colours good-filters__content colours">
+                        <span class="good-filters__colour colours_blue"></span>
+                        <span class="good-filters__colour colours_yellow"></span>
+                        <span class="good-filters__colour colours_green"></span>
+                        <span class="good-filters__colour colours_red"></span>
+                        <span class="good-filters__colour colours_purple"></span>
+                    </div>
+                </div>
+                <div class="good-filters__wrapper">
+                    <p class="good-filters__title">Размер</p>
+                    <button class="good-filters__toggle" type="button">Открыть</button>
+                    <div class="good-filters__sizes good-filters__content">
+                        <label for="XS" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="XS" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            XS (Рост 135-145 см)
+                        </label>
+                        <label for="S" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="S" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            S (Рост 146-158 см)
+                        </label>
+                        <label for="M" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="M" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            M (Рост 159-168 см)
+                        </label>
+                        <label for="L" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="L" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            L (Рост 169-178 см)
+                        </label>
+                        <label for="XL" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="XL" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            XL (Рост 179-188 см)
+                        </label>
+                    </div>
+                </div>
+                <div class="good-filters__wrapper">
+                    <p class="good-filters__title">Крылышки</p>
+                    <button class="good-filters__toggle" type="button">Открыть</button>
+                    <div class="good-filters__wings good-filters__content ">
+                        <label for="wings_yes" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="wings_yes" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            Да
+                        </label>
+                        <label for="wings_no" class="good-filters__checkbox">
+                            <input type="checkbox" name="" id="wings_no" hidden="">
+                            <span class="good-filters__checkbox-item"></span>
+                            Нет
+                        </label>
+                    </div>
+                </div>
+
+                <button class="good-filters__button button button-pink" type="submit">Показать</button>
+            </form>
+        </div>
+        <section class="goods catalog-goods">
+            <button class="good-button button button-pink" id="open-filters">Фильтр</button>
+            <article class="good">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+                        <input type="radio" name="good_sizes[]" value="XS" id="XS_good">
+                        <label class="good-sizes size-label" for="XS_good">XS</label>
+                        <input type="radio" name="good_sizes[]" value="S" id="S_good">
+                        <label class="good-sizes size-label" for="S_good">S</label>
+                        <input type="radio" name="good_sizes[]" value="M" id="M_good">
+                        <label class="good-sizes size-label" for="M_good">M</label>
+                        <input type="radio" name="good_sizes[]" value="L" id="L_good">
+                        <label class="good-sizes size-label" for="L_good">L</label>
+                        <input type="radio" name="good_sizes[]" value="XL" id="XL_good" checked>
+                        <label class="good-sizes size-label" for="XL_good">XL</label>
+
+                    </div>
+                </div>
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes2[]" value="XS" id="XS_good2">
+                        <label class="good-sizes size-label" for="XS_good2">XS</label>
+                        <input type="radio" name="good_sizes2[]" value="S" id="S_good2">
+                        <label class="good-sizes size-label" for="S_good2">S</label>
+                        <input type="radio" name="good_sizes2[]" value="M" id="M_good2">
+                        <label class="good-sizes size-label" for="M_good2">M</label>
+                        <input type="radio" name="good_sizes2[]" value="L" id="L_good2">
+                        <label class="good-sizes size-label" for="L_good2">L</label>
+                        <input type="radio" name="good_sizes2[]" value="XL" id="XL_good2" checked>
+                        <label class="good-sizes size-label" for="XL_good2">XL</label>
+
+                    </div>
+                </div>
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+                        <input type="radio" name="good_sizes3[]" value="XS" id="XS_good3">
+                        <label class="good-sizes size-label" for="XS_good3">XS</label>
+                        <input type="radio" name="good_sizes3[]" value="S" id="S_good3">
+                        <label class="good-sizes size-label" for="S_good3">S</label>
+                        <input type="radio" name="good_sizes3[]" value="M" id="M_good3">
+                        <label class="good-sizes size-label" for="M_good3">M</label>
+                        <input type="radio" name="good_sizes3[]" value="L" id="L_good3">
+                        <label class="good-sizes size-label" for="L_good3">L</label>
+                        <input type="radio" name="good_sizes3[]" value="XL" id="XL_good3" checked>
+                        <label class="good-sizes size-label" for="XL_good3">XL</label>
+                    </div>
+                </div>
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+                        <input type="radio" name="good_sizes[]" value="XS" id="XS_good">
+                        <label class="good-sizes size-label" for="XS_good">XS</label>
+                        <input type="radio" name="good_sizes[]" value="S" id="S_good">
+                        <label class="good-sizes size-label" for="S_good">S</label>
+                        <input type="radio" name="good_sizes[]" value="M" id="M_good">
+                        <label class="good-sizes size-label" for="M_good">M</label>
+                        <input type="radio" name="good_sizes[]" value="L" id="L_good">
+                        <label class="good-sizes size-label" for="L_good">L</label>
+                        <input type="radio" name="good_sizes[]" value="XL" id="XL_good" checked>
+                        <label class="good-sizes size-label" for="XL_good">XL</label>
+
+                    </div>
+                </div>
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes2[]" value="XS" id="XS_good2">
+                        <label class="good-sizes size-label" for="XS_good2">XS</label>
+                        <input type="radio" name="good_sizes2[]" value="S" id="S_good2">
+                        <label class="good-sizes size-label" for="S_good2">S</label>
+                        <input type="radio" name="good_sizes2[]" value="M" id="M_good2">
+                        <label class="good-sizes size-label" for="M_good2">M</label>
+                        <input type="radio" name="good_sizes2[]" value="L" id="L_good2">
+                        <label class="good-sizes size-label" for="L_good2">L</label>
+                        <input type="radio" name="good_sizes2[]" value="XL" id="XL_good2" checked>
+                        <label class="good-sizes size-label" for="XL_good2">XL</label>
+
+                    </div>
+                </div>
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+                        <input type="radio" name="good_sizes3[]" value="XS" id="XS_good3">
+                        <label class="good-sizes size-label" for="XS_good3">XS</label>
+                        <input type="radio" name="good_sizes3[]" value="S" id="S_good3">
+                        <label class="good-sizes size-label" for="S_good3">S</label>
+                        <input type="radio" name="good_sizes3[]" value="M" id="M_good3">
+                        <label class="good-sizes size-label" for="M_good3">M</label>
+                        <input type="radio" name="good_sizes3[]" value="L" id="L_good3">
+                        <label class="good-sizes size-label" for="L_good3">L</label>
+                        <input type="radio" name="good_sizes3[]" value="XL" id="XL_good3" checked>
+                        <label class="good-sizes size-label" for="XL_good3">XL</label>
+                    </div>
+                </div>
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good good-desktop">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good good-desktop">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good good-desktop">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good good-desktop">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good good-desktop">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good good-desktop">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good good-desktop">
+                <img class="good-image" src="img/good_photo.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Пижама-кигуруми Единорог Звездочка</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="XS" id="XS_good4">
+                        <label class="good-sizes size-label" for="XS_good4">XS</label>
+                        <input type="radio" name="good_sizes4[]" value="S" id="S_good4">
+                        <label class="good-sizes size-label" for="S_good4">S</label>
+                        <input type="radio" name="good_sizes4[]" value="M" id="M_good4">
+                        <label class="good-sizes size-label" for="M_good4">M</label>
+                        <input type="radio" name="good_sizes4[]" value="L" id="L_good4">
+                        <label class="good-sizes size-label" for="L_good4">L</label>
+                        <input type="radio" name="good_sizes4[]" value="XL" id="XL_good4" checked>
+                        <label class="good-sizes size-label" for="XL_good4">XL</label>
+                    </div>
+                </div>
+
+            </article>
+
+
+        </section>
+        </div>
+        <div class="pagination">
+            <ul class="pagination__list">
+                <li class="pagination__item active"><a href="#" class="pagination__link">1</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">...</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link">23</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper-main">
+            <div class="footer__header">
+                <img class="footer__image" src="img/logo_desktop.png">
+                <div class="footer__advantages">
+                    <div class="footer__advantage">
+                        <img src="img/sport-shirt.png">
+                        <span class="footer__advantage-text">Оплата после <br> примерки</span>
+                    </div>
+                    <div class="footer__advantage">
+                        <img src="img/shopping-bag.png">
+                        <span class="footer__advantage-text">Свой розничный<br> магазин в Москве</span>
+                    </div>
+                    <div class="footer__advantage">
+                        <img src="img/package.png">
+                        <span class="footer__advantage-text">Доставка по всей<br> Росии</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__body">
+                <ul class="footer__menu">
+                    <li class="footer__item footer__title"><a class="footer__link" href="#">Каталог</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Взрослые кугуруми</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Детские кугуруми</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Тапки</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Перчатки-лапки</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Летние кигуруми</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Аксессуары</a></li>
+                </ul>
+
+                <ul class="footer__menu">
+                    <li class="footer__item footer__title"><a class="footer__link" href="#">О магазине</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Доставка</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Оплата</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Отзывы</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Общий каталог</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Статьи</a></li>
+                </ul>
+                <div class="footer__wrapper">
+                    <div class="footer__info">
+                        <span class="footer__title">Принимаем</span>
+                        <img src="img/Alfa-Bank.png">
+                        <div class="footer__logos">
+                            <img src="img/visa-logo.png">
+                            <img src="img/mastercard.png">
+                            <img src="img/mir.png">
+                        </div>
+                    </div>
+                    <div class="footer__info">
+                        <span class="footer__title">Доставляем</span>
+                        <div class="footer__logos">
+                            <img src="img/Russian_Post_logo.png">
+                            <img src="img/sdek.png">
+                            <img src="img/EMS.png">
+                        </div>
+                    </div>
+                    <img class="footer__image" src="img/logo_desktop.png">
+                </div>
+                <div class="footer__info">
+                    <p class="footer__phone">
+                        <svg version="1.1" class="footer__phone-icon main-nav-info__icon--telephone"
+                             xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="-733 734.33 32.67 32.67" style="enable-background:new -733 734.33 32.67 32.67;"
+                             xml:space="preserve">
+                        <style type="text/css">
+	                        .st0 {
+                                fill: #ffffff;
+                            }
+                        </style>
+                            <g>
+	                        <path class="st0" d="M-704.81,750.84h-1.67c0-5.44-4.42-9.86-9.86-9.86l0-1.66C-709.98,739.31-704.81,744.48-704.81,750.84z
+		                     M-716.33,742.19l0,1.66c3.85,0,6.98,3.13,6.98,6.98l1.67,0C-707.69,746.07-711.56,742.19-716.33,742.19z M-716.67,734.33
+		                     c-9.01,0-16.33,7.33-16.33,16.33c0,9.01,7.33,16.33,16.33,16.33c0.56,0,1.01-0.45,1.01-1.01c0-0.56-0.45-1.01-1.01-1.01
+		                    c-7.9,0-14.32-6.42-14.32-14.32c0-7.9,6.42-14.32,14.32-14.32s14.32,6.42,14.32,14.32c0,3.3-1.76,6.57-4.27,7.95
+		                    c-0.91,0.5-1.9,0.75-2.96,0.76c0.63-0.38,1.18-0.89,1.59-1.53c0.08-0.12,0.19-0.23,0.24-0.36c0.33-0.79,0.36-1.68,0.56-2.52
+		                    c0.24-1.06-4.66-3.14-5.08-1.81c-0.15,0.49-0.39,2.05-0.7,2.46c-0.28,0.37-0.95,0.19-1.38-0.17c-1.12-0.95-2.36-2.35-3.46-3.46l0,0
+		                    c-0.03-0.03-0.06-0.06-0.09-0.09c-0.03-0.03-0.06-0.06-0.09-0.09v0c-1.11-1.1-2.51-2.34-3.46-3.46c-0.36-0.42-0.53-1.1-0.17-1.38
+		                    c0.41-0.31,1.97-0.54,2.46-0.7c1.33-0.42-0.75-5.33-1.82-5.08c-0.83,0.2-1.73,0.23-2.52,0.55c-0.13,0.06-0.24,0.16-0.36,0.24
+		                    c-2.8,1.77-3.16,6.08-0.43,9.29c1.04,1.23,2.13,2.42,3.24,3.58l-0.01,0c0.03,0.03,0.06,0.06,0.09,0.09
+		                    c0.03,0.03,0.06,0.06,0.09,0.1l0.01-0.01c1.16,1.12,2.54,2.77,4.77,4.26c4.7,3.14,8.31,2.26,10.44,1.1
+		                    c3.67-2.02,5.31-6.34,5.31-9.72C-700.33,741.66-707.66,734.33-716.67,734.33z"/>
+                        </g>
+                    </svg>
+                        +7 (495) 118-25-27
+                    </p>
+                    <span class="footer__schedule">пн-пт с 10:00 до 19:00</span>
+                    <button class="footer__callback callback-open button button-pink">Обратный звонок</button>
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p class="footer__text">2019 © Mimishno Все права защищены</p>
+            </div>
+        </div>
+        <div class="callback">
+
+            <form class="callback__form">
+                <p class="callback__title">Заявка на обратный звонок</p>
+                <button class="callback__close" type="button" id="close-callback">Закрыть</button>
+                <div class="callback__wrapper">
+                <label class="callback__label">Имя</label>
+                <input class="callback__input" type="text" id="name" name="name">
+                </div>
+                <div class="callback__wrapper">
+                <label class="callback__label">Телефон</label>
+                <input class="callback__input" type="text" id="phone" name="phone" placeholder="+7 (_ _ _)-_ _ _-_ _ -_ _">
+                </div>
+                <button type="submit" class="callback__button button button-pink">Отправить</button>
+            </form>
+        </div>
+    </footer>
+</div>
+<script>
+    $('.menu__close').click(function () {
+        $('.menu__mobile').toggleClass('hidden');
+    });
+    $('.main-nav-info__toggle').click(function () {
+        $('.menu__mobile').toggleClass('hidden');
+    });
+
+    $('#close-filters').click(function () {
+       $(this).parents('.good-filters').hide();
+    });
+
+    $('#open-filters').click(function () {
+        $('.good-filters').show();
+    });
+
+    $('.good-filters__toggle').click(function () {
+        $(this).parent().find('.good-filters__content').toggle('slow');
+    });
+
+    $('#close-callback').click(function () {
+        $('.callback').hide();
+    });
+
+    $('.callback-open').click(function () {
+        $('.callback').show();
+    });
+</script>
+<script>
+    $( function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 1233,
+            max: 3233,
+            values: [ 0, 3233 ],
+            slide: function( event, ui ) {
+                // $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+                for (var i = 0; i < ui.values.length; ++i) {
+                    $("input.good-filters__range-input[data-index=" + i + "]").val(ui.values[i]);
+                }
+            }
+        });
+        $("input.good-filters__range-input").change(function() {
+            var $this = $(this);
+            $("#slider-range").slider("values", $this.data("index"), $this.val());
+        });
+    } );
+</script>
+</body>
+</html>

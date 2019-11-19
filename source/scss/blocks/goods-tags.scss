@@ -1,0 +1,41 @@
+.goods-tags {
+  display: none;
+  max-width: 1180px;
+  width: 100%;
+}
+
+@media (min-width: 1100px) {
+  .goods-tags {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    &__list {
+      display: flex;
+      width: 100%;
+    }
+
+    &__item {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      padding-left: 5%;
+      padding-right: 5%;
+      border-radius: 20px;
+     background-color: white;
+      border: 1px solid $gray;
+      color: $gray;
+      display: flex;
+      justify-content: center;
+      margin-right: 10px;
+      font-weight: 900;
+
+    }
+
+    &__item.active {
+      background-color: $blue;
+      color: $white;
+      font-weight: 400;
+      border: none;
+      @include box-shadow();
+    }
+  }
+}

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Товар</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script src="js/owl.caorusel.js" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+        <nav class="menu">
+            <div class="menu__wrapper-header">
+            <div class="menu__change-city">
+                <span class="menu__change-description">Выберите город: </span> <span class="menu__city-name">Москва</span><button class="menu__choose-button">Выберите город</button>
+            </div>
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="#">Доставка</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Оплата</a></li>
+                <li class="menu__item"><a class="menu__link active" href="#">Акции</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Общий каталог</a></li>
+                <li class="menu__item"><a class="menu__link" href="#">Статьи</a></li>
+            </ul>
+            </div>
+
+        </nav>
+        <nav class="main-nav">
+            <div class="main-nav-info">
+                <div class="main-nav-info__wrapper">
+                    <a href="tovar.html"><img src="img/logo.png"
+                                              srcset="img/logo.png 320w, img/logo_desktop.png 800w, img/logo_desktop.png 1200w"
+                                              alt="Логотип"></a>
+                    <div class="main-nav-info__speech"><p class="main-nav-info__text">Доставляем по всей Росии<br>Вы
+                        платите
+                        при получении</p></div>
+                </div>
+                <div class="main-nav-info__search-wrapper">
+                    <input class="main-nav-info__search" type="text" name="search" id="search"
+                           placeholder="Поиск..">
+                    <button class="main-nav-info__search-button">Поиск</button>
+                </div>
+            </div>
+            <div class="main-nav-info">
+                <div class="main-nav-info__block">
+                    <div class="main-nav-info__images">
+                        <svg width="30" height="30" version="1.1" class="main-nav-info__icon main-nav-info__icon--cart"
+                             xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                             viewBox="-505 506 489 489" style="enable-background:new -505 506 489 489;"
+                             xml:space="preserve">
+                    <g>
+	                    <path d="M-64.9,928.7l-28-315.3c-0.6-7-6.5-12.3-13.4-12.3h-57.6c-0.8-52.6-43.8-95.1-96.6-95.1s-95.8,42.5-96.6,95.1h-57.6
+		                  c-7,0-12.8,5.3-13.4,12.3l-28,315.3c0,0.4-0.1,0.8-0.1,1.2c0,35.9,32.9,65.1,73.4,65.1h244.6c40.5,0,73.4-29.2,73.4-65.1
+		                C-64.8,929.5-64.8,929.1-64.9,928.7z M-260.5,533c37.9,0,68.8,30.4,69.6,68.1h-139.2C-329.3,563.4-298.4,533-260.5,533z
+		                M-138.2,968h-244.6c-25.4,0-46-16.8-46.4-37.5l26.8-302.3h45.2v41c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h139.3v41
+		                  c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5v-41h45.2l26.9,302.3C-92.2,951.2-112.9,968-138.2,968z"/>
+                    </g>
+                    </svg>
+                        <span class="main-nav-info__cost">0</span>
+                    </div>
+                    <div class="main-nav-info__cart-wrapper">
+                        <p class="main-nav-info__cart-text">Корзина</p>
+                        <p class="main-nav-info__cart">1000 руб.</p>
+                    </div>
+                    <button class="main-nav-info__toggle">Открыть меню</button>
+                </div>
+                <div class="main-nav-info__block">
+                    <p class="main-nav-info__phone">+7 (495) 118-25-27</p>
+                    <span class="main-nav-info__schedule">пн-пт с 10:00 до 19:00</span>
+                    <svg version="1.1" class=" main-nav-info__icon main-nav-info__icon--telephone"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="-733 734.33 32.67 32.67" style="enable-background:new -733 734.33 32.67 32.67;"
+                         xml:space="preserve">
+                        <style type="text/css">
+	                        .st0 {
+                                fill: #CE1348;
+                            }
+                        </style>
+                        <g>
+	                        <path class="st0" d="M-704.81,750.84h-1.67c0-5.44-4.42-9.86-9.86-9.86l0-1.66C-709.98,739.31-704.81,744.48-704.81,750.84z
+		                     M-716.33,742.19l0,1.66c3.85,0,6.98,3.13,6.98,6.98l1.67,0C-707.69,746.07-711.56,742.19-716.33,742.19z M-716.67,734.33
+		                     c-9.01,0-16.33,7.33-16.33,16.33c0,9.01,7.33,16.33,16.33,16.33c0.56,0,1.01-0.45,1.01-1.01c0-0.56-0.45-1.01-1.01-1.01
+		                    c-7.9,0-14.32-6.42-14.32-14.32c0-7.9,6.42-14.32,14.32-14.32s14.32,6.42,14.32,14.32c0,3.3-1.76,6.57-4.27,7.95
+		                    c-0.91,0.5-1.9,0.75-2.96,0.76c0.63-0.38,1.18-0.89,1.59-1.53c0.08-0.12,0.19-0.23,0.24-0.36c0.33-0.79,0.36-1.68,0.56-2.52
+		                    c0.24-1.06-4.66-3.14-5.08-1.81c-0.15,0.49-0.39,2.05-0.7,2.46c-0.28,0.37-0.95,0.19-1.38-0.17c-1.12-0.95-2.36-2.35-3.46-3.46l0,0
+		                    c-0.03-0.03-0.06-0.06-0.09-0.09c-0.03-0.03-0.06-0.06-0.09-0.09v0c-1.11-1.1-2.51-2.34-3.46-3.46c-0.36-0.42-0.53-1.1-0.17-1.38
+		                    c0.41-0.31,1.97-0.54,2.46-0.7c1.33-0.42-0.75-5.33-1.82-5.08c-0.83,0.2-1.73,0.23-2.52,0.55c-0.13,0.06-0.24,0.16-0.36,0.24
+		                    c-2.8,1.77-3.16,6.08-0.43,9.29c1.04,1.23,2.13,2.42,3.24,3.58l-0.01,0c0.03,0.03,0.06,0.06,0.09,0.09
+		                    c0.03,0.03,0.06,0.06,0.09,0.1l0.01-0.01c1.16,1.12,2.54,2.77,4.77,4.26c4.7,3.14,8.31,2.26,10.44,1.1
+		                    c3.67-2.02,5.31-6.34,5.31-9.72C-700.33,741.66-707.66,734.33-716.67,734.33z"/>
+                        </g>
+                    </svg>
+
+                    <span class="main-nav-info__callback-text">обратный звонок</span>
+                    <button class="main-nav-info__callback callback-open button blue-button">Обратный звонок</button>
+                </div>
+            </div>
+        </nav>
+        <nav class="sub-menu">
+            <ul class="sub-menu__list">
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Взрослые кигуруми</a><span>(Рост 150см - 190см)</span>
+                </li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Детские
+                    кигуруми</a><span>(Рост 95см - 150см)</span></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Тапки-лапки</a></li>
+                <li class="sub-menu__item"><a class="sub-menu__link" href="#">Аксессуары</a></li>
+            </ul>
+        </nav>
+        <div class="menu__mobile hidden">
+
+            <div class="menu__wrapper">
+                <button class="menu__close">Закрыть</button>
+                <p class="menu__mobile-title">Меню</p>
+
+                <nav class="sub-menu">
+                    <ul class="sub-menu__list">
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Взрослые кугуруми</a><span>(Рост 150см - 190см)</span>
+                        </li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Детские
+                            кугуруми</a><span>(Рост 95см - 150см)</span></li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Тапки</a></li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Перчатки-лапки</a></li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Летние кугуруми</a></li>
+                        <li class="sub-menu__item"><a class="sub-menu__link" href="#">Аксессуары</a></li>
+                    </ul>
+                </nav>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a class="menu__link" href="#">Доставка</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Оплата</a></li>
+                        <li class="menu__item"><a class="menu__link active" href="#">Акции</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Отзывы</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Общий каталог</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">Статьи</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="preview">
+            <div class="preview__wrapper">
+            <p class="preview__title">Пижама-Кугуруми Единорог Звездочка</p>
+            <ul class="preview__breadcrumbs">
+                <li class="preview__breadcrumb">Главная</li>
+                <span class="preview__delimiter">/</span>
+                <li class="preview__breadcrumb">Взрослые кугуруми</li>
+            </ul>
+            </div>
+        </div>
+
+            <section class="product">
+                <div class="product__wrapper">
+                    <div class="product__images-wrapper">
+                        <div class="product__image-wrapper">
+                            <img src="img/good_photo.png">
+                        </div>
+                        <div class="product__slider slider owl-carousel owl-theme">
+                            <img src="img/good_mini_photo.png">
+                            <img src="img/good_mini_photo.png">
+                            <img src="img/good_mini_photo.png">
+                            <img src="img/good_mini_photo.png">
+                            <img src="img/good_mini_photo.png">
+                        </div>
+                    </div>
+                    <div class="product__info-wrapper">
+                        <div class="product__prices">
+                            <span class="product__old-price">3190 ₽</span>
+                            <span class="product__price">3190</span>
+                            <span class="product__discount purple-gradient">-10%</span>
+                        </div>
+                        <div class="product__code-wrapper">
+                            <span class="product__code-label">Код товара: </span>
+                            <span class="product__code-value">123456</span>
+                        </div>
+                        <div class="product__range-wrapper">
+                            <div class="product__range-block">
+                                <div class="product__rise-wrapper">
+                                    <input class="product__rise" type="number" value="175">
+                                    <span class="product__rise-text">Рост, см</span>
+                                </div>
+                            <div class="product__range">
+
+                                <div class="product__sizes-wrapper">
+                                <span class="product__rise-value">145</span>
+                                <span class="product__rise-value">155</span>
+                                <span class="product__rise-value">165</span>
+                                <span class="product__rise-value">175</span>
+                                <span class="product__rise-value">185</span>
+                                <span class="product__rise-value">200</span>
+
+                                </div>
+
+                                <input class="product__range-input" type="range" min="145" max="200">
+                                <div id="slider-range"></div>
+<!--                                <span class="product__pin"></span>-->
+<!--                                <span class="product__rise-range"></span>-->
+
+                            </div>
+
+                            <div class="product__sizes sizes">
+                                <input class="product__size" type="radio" name="sizes[]" value="XS" id="XS">
+                                <label class="product__size-label size-label" for="XS">XS</label>
+                                <input class="product__size" type="radio" name="sizes[]" value="S" id="S">
+                                <label class="product__size-label size-label" for="S">S</label>
+                                <input class="product__size" type="radio" name="sizes[]" value="M" id="M">
+                                <label class="product__size-label size-label" for="M">M</label>
+                                <input class="product__size" type="radio" name="sizes[]" value="L" id="L">
+                                <label class="product__size-label size-label" for="L">L</label>
+                                <input class="product__size" type="radio" name="sizes[]" value="XL" id="XL" checked>
+                                <label class="product__size-label size-label" for="XL">XL</label>
+                                <span class="product__sizes-value product__sizes-value--xs">Рост 135 см - 145 см</span>
+                                <span class="product__sizes-value product__sizes-value--s" >Рост 146 см - 158 см</span>
+                                <span class="product__sizes-value product__sizes-value--m" >Рост 159 см - 168 см</span>
+                                <span class="product__sizes-value product__sizes-value--l">Рост 169 см -178 см</span>
+                                <span class="product__sizes-value product__sizes-value--xl" >Рост 179 см - 188 см</span>
+                            </div>
+                            </div>
+
+                        </div>
+
+                        <div class="product__stock">
+                            <span class="product__stock-text"><span class="product__stock-image"></span>В наличии 15 шт</span>
+                        </div>
+                        <div class="product__help">
+                            <span class="product__help-icon"></span>
+                            <a class="product__help-link" href="#">Как выбрать размер?</a>
+                        </div>
+
+                        <div class="product__order">
+                            <div class="product__order-wrapper">
+                                <div class="product__order-cart-buttons">
+                                    <button class="product__amount minus">-</button>
+                                    <input class="product__amount product__amount--transparent" type="text" value="1">
+                                    <button class="product__amount plus">+</button>
+                                </div>
+                                <button class="product__add-cart button button-pink">В корзину</button>
+                            </div>
+                            <div class="product__order-cart">
+                                <div class="product__order-cart-wrapper">
+                                    <input class="product__order-phone" type="text"
+                                           placeholder="+7 (_ _ _)-_ _ _- _ _ - _ _">
+                                    <button class="product__order-add button blue-button">Заказать в один клик</button>
+                                </div>
+                                <span class="product__order-info">Оставьте свой телефон, и наш менеджер свяжется с вами</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <div class="advantages">
+            <ul class="advantages">
+                <li class="advantage__item">
+                    <img class="advantage__image" src="img/purse.png">
+                    <p class="advantage__text">Опалата после<br> проверки</p>
+                </li>
+                <li class="advantage__item">
+                    <img class="advantage__image" src="img/calendar.png">
+                    <p class="advantage__text">30 дней<br> на возврат</p>
+                </li>
+                <li class="advantage__item">
+                    <img class="advantage__image" src="img/clock.png">
+                    <p class="advantage__text">График работы<br> ежедневно <br> с 10 до 20:00</p>
+                </li>
+                <li class="advantage__item">
+                    <img class="advantage__image" src="img/pin.png">
+                    <p class="advantage__text">Розничный магазин: Москва, м. Авиамоторная ул. Андроновская</p>
+                </li>
+            </ul>
+
+        </div>
+            <div class="product-info">
+                <div class="product-info__wrapper">
+                    <p class="product-info__header">Регион доставки: <a href="#">Выберите город</a></p>
+                    <table class="product-info__delivery">
+                        <tbody>
+                        <tr class="product-info__delivery-self">
+                            <td><a href="#">Пункты самовывоза</a></td>
+                            <td>Уточняйте <br> у менеджера</td>
+                            <td>Уточняйте <br> у менеджера</td>
+                        </tr>
+                        <tr class="product-info__delivery-courier">
+                            <td>Курьером до двери</td>
+                            <td>Уточняйте <br> у менеджера</td>
+                            <td>Уточняйте <br> у менеджера</td>
+                        </tr>
+                        <tr class="product-info__delivery-mail">
+                            <td>Почта России</td>
+                            <td>Уточняйте <br> у менеджера</td>
+                            <td class="bold">250 p</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="product-info__block">
+
+                    <input class="product-info__description-input info-input" type="radio" name="features[]"
+                           id="description">
+                    <label class="product-info__description-label info-label" for="description">Описание</label>
+
+
+                    <input class="product-info__description-input info-input" name="features[]" type="radio"
+                           id="features" checked>
+                    <label class="product-info__description-label info-label" for="features">Характеристики</label>
+                    <p class="product-info__description">Нежный, добрый и пушистый розовый Кролик обязательно разделит
+                        свои
+                        качества с тем, кто выберет кигуруми, созданный в «его честь». Приятный глазу и на ощупь костюм
+                        порадует и удивит как самого кигурумина, так и всех, с кем он окажется рядом. Вечеринка и
+                        опен-эйр,
+                        флешмоб и афтепати, пляжная дискотека или спорт на горных склонах – кигуруми «Розовый кролик»
+                        будут
+                        рады везде!
+
+                        Не забудьте приобрести к данному костюму розовые тапочки.</p>
+                    <p class="product-info__features">
+                        <span><strong>Материал:</strong>флис</span>
+                        <span><strong>Пол:</strong><span>унисекс</span>
+                    </p>
+                </div>
+            </div>
+        <section class="review">
+            <h1 class="review__title">Отзывы</h1>
+            <p class="review__info">В комментариях вы можете прочитать и оставить свой отзыв о работе нашего
+                интернет-магазина</p>
+            <span class="review__items-label">Комментарии (5):</span>
+            <div class="review__items">
+                <div class="review__item">
+                    <div class="review__header">
+                        <span class="review__author">Ольга</span>
+                        <div class="review__rating rating">
+                            <div class="rating-star"></div>
+                            <div class="rating-star"></div>
+                            <div class="rating-star"></div>
+                            <div class="rating-star"></div>
+                            <div class="rating-star"></div>
+                        </div>
+                        <p class="review__created"><span>07.10.19</span><span>17:00</span></p>
+                    </div>
+
+                    <div class="review__body">
+                        <p class="review__text">Впервые делала у Вас заказ, посылка пришла очень быстро, довольна и
+                            кугуруми
+                            и тапочками. Спасибо
+                            больщое за обслуживание!</p>
+                        <a class="fancybox" href="img/ex3.jpg"><img src="img/ex3.jpg"></a>
+                        <a class="fancybox" href="img/ex.jpg"><img src="img/ex.jpg"></a>
+                    </div>
+                </div>
+                <div class="review__response">
+                    <p>Мы рады, что Вам понравились Кигуруми и тапочки, носите с удовольствием!</p>
+                    <img src="img/logo_review.png">
+                </div>
+
+
+            <div class="review__item">
+                <div class="review__header">
+                    <span class="review__author">Ольга</span>
+                    <div class="review__rating rating">
+                        <div class="rating-star rating-star-empty"></div>
+                        <div class="rating-star rating-star-empty"></div>
+                        <div class="rating-star rating-star-empty"></div>
+                        <div class="rating-star rating-star-empty"></div>
+                        <div class="rating-star rating-star-empty"></div>
+                    </div>
+                    <p class="review__created"><span>07.10.19</span><span>17:00</span></p>
+                </div>
+
+                <div class="review__body">
+                    <p class="review__text">Впервые делала у Вас заказ, посылка пришла очень быстро, довольна и кугуруми
+                        и
+                        тапочками. Спасибо
+                        больщое за обслуживание!</p>
+                </div>
+            </div>
+            <div class="review__response">
+                <p>Мы рады, что Вам понравились Кигуруми и тапочки, носите с удовольствием!</p>
+                <img src="img/logo_review.png">
+                <a class="review__more-link purple-gradient" href="#">еще отзывы</a>
+            </div>
+            </div>
+
+            <div class="review__new-user">
+                <form>
+                    <div class="review__wrapper">
+                        <input class="review__input" type="text" placeholder="Ваше имя">
+                        <div class="review__rating rating">
+                            <div class="rating-star"></div>
+                            <div class="rating-star rating-star-empty"></div>
+                            <div class="rating-star rating-star-empty"></div>
+                            <div class="rating-star rating-star-empty"></div>
+                            <div class="rating-star rating-star-empty"></div>
+                        </div>
+                        <textarea class="review__input textarea" placeholder="Комментарий" cols="6" rows="6"></textarea>
+                        <input class="review__photo-input" type="file" id="comment-image">
+                        <label class="review__photo-label" for="comment-image"><span
+                                class="review__add-photo plus">+</span>Загрузить
+                            фотографии</label>
+                    </div>
+                    <button class="review__submit button-pink" type="submit">Отправить</button>
+
+                </form>
+                <div class="review__info-wrapper">
+                    <p class="review__info-text">Оставьте свой отзыв</p>
+                </div>
+            </div>
+        </section>
+        <section class="goods">
+            <h1 class="goods__title">С этим товаром покупают: </h1>
+            <article class="good">
+                <img class="good-image" src="img/tapki.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Тапки-лапки</p>
+                    <div class="good-info">
+                        <p>
+                        <span class="good-stock">В наличии</span>
+                        <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+                        <input type="radio" name="good_sizes[]" value="25-30" id="small_good">
+                        <label class="good-sizes size-label size-label--long" for="small_good">25-30</label>
+                        <input type="radio" name="good_sizes[]" value="31-38" id="medium_good">
+                        <label class="good-sizes size-label size-label--long" for="medium_good">31-38</label>
+                        <input type="radio" name="good_sizes[]" value=39-45M" id="large_good">
+                        <label class="good-sizes size-label size-label--long" for="large_good">39-45</label>
+
+                    </div>
+                </div>
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/tapki.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Тапки-лапки</p>
+                    <div class="good-info">
+                        <p>
+                        <span class="good-stock">В наличии</span>
+                        <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+                        <input type="radio" name="good_sizes2[]" value="25-30" id="small_good2">
+                        <label class="good-sizes size-label size-label--long" for="small_good2">25-30</label>
+                        <input type="radio" name="good_sizes2[]" value="31-38" id="medium_good2">
+                        <label class="good-sizes size-label size-label--long" for="medium_good2">31-38</label>
+                        <input type="radio" name="good_sizes2[]" value="39-45" id="large_good2">
+                        <label class="good-sizes size-label size-label--long" for="large_good2">39-45</label>
+                    </div>
+                </div>
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/tapki.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Тапки-лапки</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+                        <button class="good-add  button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes3[]" value="25-30" id="small_good3">
+                        <label class="good-sizes size-label size-label--long" for="small_good3">25-30</label>
+                        <input type="radio" name="good_sizes3[]" value="31-38" id="medium_good3">
+                        <label class="good-sizes size-label size-label--long" for="medium_good3">31-38</label>
+                        <input type="radio" name="good_sizes3[]" value="39-45" id="large_good3">
+                        <label class="good-sizes size-label size-label--long" for="large_good3">39-45</label>
+                    </div>
+                </div>
+
+            </article>
+            <article class="good">
+                <img class="good-image" src="img/tapki.png">
+                <div class="goods-wrapper">
+                    <p class="good-title">Тапки-лапки</p>
+                    <div class="good-info">
+                        <p>
+                            <span class="good-stock">В наличии</span>
+                            <span class="good-price">3190 руб.</span>
+                        </p>
+
+
+                        <button class="good-add button button-pink"> 2490 руб.</button>
+                    </div>
+                    <p class="good-label">Размер</p>
+                    <div class="good-sizes sizes">
+
+                        <input type="radio" name="good_sizes4[]" value="25-30" id="small_good4">
+                        <label class="good-sizes size-label size-label--long" for="small_good4">25-30</label>
+                        <input type="radio" name="good_sizes4[]" value="31-38" id="medium_good4">
+                        <label class="good-sizes size-label size-label--long" for="medium_good4">31-38</label>
+                        <input type="radio" name="good_sizes4[]" value="39-45" id="large_good4">
+                        <label class="good-sizes size-label size-label--long" for="large_good4">39-45</label>
+
+                    </div>
+                </div>
+            </article>
+
+            <a href="#" class="good-button button blue-button">Подробнее</a>
+        </section>
+        <section class="advantages-info">
+            <h1 class="advantages-info__title">Почему мы?</h1>
+            <div class="advantages-info__wrapper">
+                <div class="advantage__item">
+                    <img class="advantage__image" src="img/quality.png">
+                    <span class="advantage__text">Контроль<br> качества</span>
+                </div>
+                <div class="advantage__item">
+                    <img class="advantage__image" src="img/24-hours.png">
+                    <span class="advantage__text">Работаем без<br> выходных</span>
+                </div>
+                <div class="advantage__item">
+                    <img class="advantage__image" src="img/exchange.png">
+                    <span class="advantage__text">30 дней на<br> обмен/возврат</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper-main">
+        <div class="footer__header">
+            <img class="footer__image" src="img/logo_desktop.png">
+            <div class="footer__advantages">
+                <div class="footer__advantage">
+                    <img src="img/sport-shirt.png">
+                    <span class="footer__advantage-text">Оплата после <br> примерки</span>
+                </div>
+                <div class="footer__advantage">
+                    <img src="img/shopping-bag.png">
+                    <span class="footer__advantage-text">Свой розничный<br> магазин в Москве</span>
+                </div>
+                <div class="footer__advantage">
+                    <img src="img/package.png">
+                    <span class="footer__advantage-text">Доставка по всей<br> Росии</span>
+                </div>
+            </div>
+        </div>
+        <div class="footer__body">
+            <ul class="footer__menu">
+                <li class="footer__item footer__title"><a class="footer__link" href="#">Каталог</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Взрослые кугуруми</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Детские кугуруми</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Тапки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Перчатки-лапки</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Летние кигуруми</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Аксессуары</a></li>
+            </ul>
+
+            <ul class="footer__menu">
+                <li class="footer__item footer__title"><a class="footer__link" href="#">О магазине</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Доставка</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Оплата</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Акции</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Отзывы</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Общий каталог</a></li>
+                <li class="footer__item"><a class="footer__link" href="#">Статьи</a></li>
+            </ul>
+            <div class="footer__wrapper">
+                <div class="footer__info">
+                    <span class="footer__title">Принимаем</span>
+                    <img src="img/Alfa-Bank.png">
+                    <div class="footer__logos">
+                        <img src="img/visa-logo.png">
+                        <img src="img/mastercard.png">
+                        <img src="img/mir.png">
+                    </div>
+                </div>
+                <div class="footer__info">
+                    <span class="footer__title">Доставляем</span>
+                    <div class="footer__logos">
+                        <img src="img/Russian_Post_logo.png">
+                        <img src="img/sdek.png">
+                        <img src="img/EMS.png">
+                    </div>
+                </div>
+                <img class="footer__image" src="img/logo_desktop.png">
+            </div>
+            <div class="footer__info">
+                <p class="footer__phone">
+                    <svg version="1.1" class="footer__phone-icon main-nav-info__icon--telephone"
+                         xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="-733 734.33 32.67 32.67" style="enable-background:new -733 734.33 32.67 32.67;"
+                         xml:space="preserve">
+                        <style type="text/css">
+	                        .st0 {
+                                fill: #ffffff;
+                            }
+                        </style>
+                        <g>
+	                        <path class="st0" d="M-704.81,750.84h-1.67c0-5.44-4.42-9.86-9.86-9.86l0-1.66C-709.98,739.31-704.81,744.48-704.81,750.84z
+		                     M-716.33,742.19l0,1.66c3.85,0,6.98,3.13,6.98,6.98l1.67,0C-707.69,746.07-711.56,742.19-716.33,742.19z M-716.67,734.33
+		                     c-9.01,0-16.33,7.33-16.33,16.33c0,9.01,7.33,16.33,16.33,16.33c0.56,0,1.01-0.45,1.01-1.01c0-0.56-0.45-1.01-1.01-1.01
+		                    c-7.9,0-14.32-6.42-14.32-14.32c0-7.9,6.42-14.32,14.32-14.32s14.32,6.42,14.32,14.32c0,3.3-1.76,6.57-4.27,7.95
+		                    c-0.91,0.5-1.9,0.75-2.96,0.76c0.63-0.38,1.18-0.89,1.59-1.53c0.08-0.12,0.19-0.23,0.24-0.36c0.33-0.79,0.36-1.68,0.56-2.52
+		                    c0.24-1.06-4.66-3.14-5.08-1.81c-0.15,0.49-0.39,2.05-0.7,2.46c-0.28,0.37-0.95,0.19-1.38-0.17c-1.12-0.95-2.36-2.35-3.46-3.46l0,0
+		                    c-0.03-0.03-0.06-0.06-0.09-0.09c-0.03-0.03-0.06-0.06-0.09-0.09v0c-1.11-1.1-2.51-2.34-3.46-3.46c-0.36-0.42-0.53-1.1-0.17-1.38
+		                    c0.41-0.31,1.97-0.54,2.46-0.7c1.33-0.42-0.75-5.33-1.82-5.08c-0.83,0.2-1.73,0.23-2.52,0.55c-0.13,0.06-0.24,0.16-0.36,0.24
+		                    c-2.8,1.77-3.16,6.08-0.43,9.29c1.04,1.23,2.13,2.42,3.24,3.58l-0.01,0c0.03,0.03,0.06,0.06,0.09,0.09
+		                    c0.03,0.03,0.06,0.06,0.09,0.1l0.01-0.01c1.16,1.12,2.54,2.77,4.77,4.26c4.7,3.14,8.31,2.26,10.44,1.1
+		                    c3.67-2.02,5.31-6.34,5.31-9.72C-700.33,741.66-707.66,734.33-716.67,734.33z"/>
+                        </g>
+                    </svg>
+                    +7 (495) 118-25-27
+                </p>
+                <span class="footer__schedule">пн-пт с 10:00 до 19:00</span>
+                <button class="footer__callback callback-open  button button-pink">Обратный звонок</button>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p class="footer__text">2019 © Mimishno Все права защищены</p>
+        </div>
+        </div>
+        <div class="callback">
+
+            <form class="callback__form">
+                <p class="callback__title">Заявка на обратный звонок</p>
+                <button class="callback__close" type="button" id="close-callback">Закрыть</button>
+                <div class="callback__wrapper">
+                    <label class="callback__label">Имя</label>
+                    <input class="callback__input callback__input--name" type="text" id="name" name="name">
+                </div>
+                <div class="callback__wrapper">
+                    <label class="callback__label">Телефон</label>
+                    <input class="callback__input callback__input--tel" type="tel" id="phone" name="phone" placeholder="+7 (_ _ _)-_ _ _-_ _ -_ _">
+                </div>
+                <button type="submit" class="callback__button button button-pink">Отправить</button>
+            </form>
+        </div>
+    </footer>
+</div>
+<script src="js/index.js" type="javascript"></script>
+<script>
+    $('.menu__close').click(function () {
+        $('.menu__mobile').toggleClass('hidden');
+    });
+    $('.main-nav-info__toggle').click(function () {
+        $('.menu__mobile').toggleClass('hidden');
+    });
+    $('#close-callback').click(function () {
+        $('.callback').hide();
+    });
+
+    $('.callback-open').click(function () {
+        $('.callback').show();
+    });
+
+    $(".fancybox").fancybox();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<script>
+    $('.product__slider').owlCarousel({
+      items:3,
+        dragEndSpeed: 100,
+        autoHeightClass: false,
+        autoWidth: false,
+        rows: 1,
+        nav: true,
+        dots: false,
+        // autoWidth: true,
+        // margin: 25,
+        //stagePadding: 30,
+        navContainerClass: 'owl-nav',
+        navClass: ['arrow-wrapper arrow-wrapper--left', 'arrow-wrapper arrow-wrapper--right'],
+        navText: ["<img src='img/arrow-left-slider.png'  width='20' height='40'>", "<img  width='20' height='40' src='img/arrow-right-slider.png'>"]
+    });
+
+</script>
+
+<script>
+
+
+    $( function() {
+
+        const sizes__array = [145,158,168,178,188];
+        const sizes = {
+            'XS': 145,
+            'S' : 158,
+            'M' : 168,
+            'L' : 178,
+            'XL' : 188
+        };
+        $( "#slider-range" ).slider({
+            range: "max",
+            min: 145,
+            max: 200,
+            value: 1,
+            animate: "fast",
+            change: function( event, ui ) {
+
+                $( "input.product__rise" ).val( ui.value );
+                $('input.product__size').attr('checked', false);
+               for (let i=0;i< sizes__array.length;i++){
+                    if (ui.value >= 145 && ui.value < 158) {
+
+                        $('input#XS').attr('checked', 'checked');
+
+                    } else if (ui.value > 158 && ui.value < 168) {
+                        $('input#S').attr('checked', 'checked');
+                    } else if (ui.value > 168 && ui.value < 178){
+                        $('input#M').attr('checked', 'checked');
+                    } else if (ui.value > 178 && ui.value <= 188){
+                        $('input#L').attr('checked', 'checked');
+                    } else if (ui.value > 188 && ui.value <= 200){
+                        $('input#XL').attr('checked', 'checked');
+                    }
+               }
+            }
+        });
+        $( "input.product__rise" ).val( $( "#slider-range" ).slider( "value" ) );
+    } );
+</script>
+</body>
+</html>

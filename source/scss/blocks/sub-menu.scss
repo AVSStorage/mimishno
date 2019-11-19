@@ -1,0 +1,84 @@
+.sub-menu {
+  background-color: $blue;
+  padding: 20px;
+  padding-left: 30px;
+  display: none;
+
+  &__list {
+    list-style-image: url('../img/circle.png');
+  }
+
+  &__item span {
+    display: none;
+  }
+
+  &__link {
+    display: block;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    color: $white;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family: 'OvalCyr-Normal';
+  }
+}
+
+
+@media (min-width: 576px) {
+  .sub-menu {
+    filter: drop-shadow(0px 3px 12px rgba(0,0,0,0.4));
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    &__list {
+      max-width: 1170px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+
+    }
+
+    &__item {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-right: 1px solid $blue;
+      padding: 5px;
+      align-items: center;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+    &__item span {
+      display: block;
+      color: $gray;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    &__link {
+      font-size: 15px;
+      text-align: center;
+
+      color: $black;
+    }
+
+  }
+}
+
+@media (min-width: 768px) {
+  .sub-menu {
+    &__item span {
+      font-size: 15px;
+    }
+
+    &__link {
+      font-size: 20px;
+    }
+  }
+}

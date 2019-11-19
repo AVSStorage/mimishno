@@ -1,0 +1,79 @@
+.article-full {
+  width: 95%;
+  margin:  10% auto;
+  @include black-box-shadow();
+  border-radius: 20px;
+  padding: 20px;
+  background-color: $white;
+
+  &__image {
+    width: 100%
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 25px;
+    text-align: justify;
+    text-indent: 40px;
+
+
+    strong {
+
+      display: block;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      font-family: 'OvalCyr-Normal';
+      font-size: 18px;
+      text-indent: 0;
+    }
+    &--date {
+      text-indent: 0;
+      text-align: start;
+      width: 100%;
+      font-size: 20px;
+      margin-bottom: 20px;
+      padding-left: 30px;
+      position: relative;
+
+      &::before {
+        content: "";
+        background-image: url("../img/clock.png");
+        width: 30px;
+        position: absolute;
+        left: -2px;
+        top: -5px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .article-full {
+    display: block;
+    max-width: 1180px;
+    margin: 0;
+    margin-top: 1%;
+    margin-bottom: 4%;
+    &__image {
+      width: 41%;
+      max-width: 560px;
+      max-height: 472px;
+      margin-right: 20px;
+
+    }
+
+    &__text {
+      margin-bottom: 20px;
+      font-size: 17px;
+      strong {
+        font-size: 25px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

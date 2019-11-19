@@ -1,0 +1,52 @@
+.discount {
+    max-width: 1180px;
+    @include padding-block-mobile();
+    margin-bottom: 35px;
+
+    &__title {
+        font-family: 'OvalCyr-Normal';
+        color: $pink;
+        font-size: 7vw;
+    }
+
+    &__text {
+        font-size: 5vw;
+        text-align: justify;
+    }
+
+    &__image {
+        min-height: 280px;
+        background-image: url("../img/delivery_image.png");
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+}
+
+@media (min-width: 576px) {
+    .discount {
+        &__title {
+            font-size: 2vw;
+        }
+
+        &__text {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (min-width: 1000px) {
+    .discount {
+        padding-left: 0;
+        &__image {
+            background-image: url("../img/delivery_image_desktop.png");
+            background-size: contain;
+            height: 200px;
+            min-height: auto;
+        }
+
+        &__text {
+            line-height: 25px;
+            text-indent: 30px;
+        }
+    }
+}
